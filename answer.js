@@ -25,3 +25,15 @@ function getDayType(val) {
   }
 }
 
+function validateUsername(val) {
+  if (val.length < 4) {
+    return "Too Short";
+  } else if (val.includes(" ")) {
+    return "No Space Allowed";
+  } else if (val.includes("admin")) {
+    return "Reserved Word";
+  } else {
+    return "Available";
+  }
+}
+
